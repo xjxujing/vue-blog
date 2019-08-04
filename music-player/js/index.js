@@ -94,7 +94,7 @@ oPrev.onmouseup = function () {
 // 上下首切换
 // 加载本地资源
 var len = musicList.length;
-function NextPrev(num) {
+async function NextPrev(num) {
     clearInterval(timer);
     i += num;
     if (i > len - 1) {
@@ -106,7 +106,8 @@ function NextPrev(num) {
     oInfo.innerHTML = infoList[i];
     oImg.src = "./img/" + imgList[i];
     oAudio.src = "./source/" + musicList[i] + ".mp3";
-    oAudio.load();
+    oProActive.style.width = "8px";
+    await oAudio.load();
     musicPlay();
 }
 
