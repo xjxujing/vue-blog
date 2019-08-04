@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动漫歌单</title>
+    <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./download/font_argbx0td86v/iconfont.css">
+    <link href="https://cdn.bootcss.com/fontawesome-iconpicker/3.2.0/css/fontawesome-iconpicker.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- 图片部分 -->
+        <main>
+            <img class="start pause" src="./img/1.jpg" alt="">
+            <audio id="audio" src="./source/田中真弓,中井和哉,岡村明美 - ビンクスの酒 (BONUS TRACK).mp3"></audio>
+        </main>
+        <!-- 歌曲信息 -->
+        <div class="song-info">
+
+            <p class="name">ビンクスの酒 (BONUS TRACK)</p>
+
+            <div class="tool-box">
+                <div class="merquee">
+                    <span class="info merquee-txt">宾克斯的美酒</span>
+                </div>
+                <span> <i class="mode iconfont icon-dianshunxu"></i></span>
+            </div>
+
+        </div>
+
+        <!-- 工具 -->
+        <div class="tool">
+            <!-- 进度条 -->
+            <div class="progress">
+                <!-- 音乐当前播放时间 -->
+                <!-- <div class="current-time">00:00</div> -->
+                <!-- 进度条 -->
+                <div class="pro-box">
+                    <!-- 播放完整进度条 -->
+                    <div class="pro-bg"></div>
+                    <!-- 播放时间进度条 -->
+                    <div class="pro-active">
+                        <!-- 小圆点 -->
+                        <div class="radio-box">
+                            <div class="radio"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 当前音乐总时间 -->
+                <!-- <div class="all-time">00:00</div> -->
+            </div>
+
+            <!-- 控制 -->
+            <div class="controls">
+                <div class="prev">
+                    <i class="iconfont icon-shangyishou"></i>
+                </div>
+                <div class="btn">
+                    <!-- icon-zanting -->
+                    <!-- icon-bofang -->
+                    <i class="iconfont icon-bofang"></i>
+                </div>
+                <div class="next">
+                    <i class="iconfont icon-xiayishou"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/music.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
