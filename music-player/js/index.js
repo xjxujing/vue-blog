@@ -19,11 +19,13 @@ var timer;
 var bgwidth = 252;
 var volHeight = 92;
 
-// 请求在线资源
-// var url = "http://localhost:3000/playlist/detail"
-// var listId = 2794345340;
+var i = 0;
 
-
+function init() {
+    oAudio.src = "./source/" + musicList[i] + ".mp3";
+    oAudio.load();
+}
+init();
 // 顺序播放和单曲循环切换
 oMode.onclick = function () {
     if (oMode.classList.contains("icon-dianshunxu")) {
@@ -78,7 +80,6 @@ oAudio.onended = function () {
     }
 };
 
-var i = 0;
 
 // 点击下一首
 oNext.onmouseup = function () {
@@ -104,11 +105,15 @@ function NextPrev(num) {
     oName.innerHTML = nameList[i];
     oInfo.innerHTML = infoList[i];
     oImg.src = "./img/" + imgList[i];
-    oAudio.src = "./source/" + musicList[i] + ".mp3"
+    oAudio.src = "./source/" + musicList[i] + ".mp3";
+    oAudio.load();
     musicPlay();
 }
 
 
+// 请求在线资源
+// var url = "http://localhost:3000/playlist/detail"
+// var listId = 2794345340;
 // 上下首切换
 // ajax请求在线资源
 // async function NextPrev(num) {
